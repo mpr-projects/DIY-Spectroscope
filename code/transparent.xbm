@@ -1,0 +1,5 @@
+#define trans_width 2
+#define trans_height 2
+static unsigned char trans_bits[] = {
+   0x00, 0x00
+};

@@ -1,0 +1,50 @@
+nm_range:
+  nm_min: 425
+  nm_max: 675
+
+model_size: [50, 50, 50]
+
+initial_training:
+  paths:
+    combined_response_function: 'sources/crf.npy'
+    save_path: 'outputs/initial_params.pickle'
+
+  training:
+    seed: 42
+    batch_size: 500
+    linear_lr_schedule_params:
+      init_value: 0.001
+      end_value: 0.00001
+      transition_begin: 100
+      transition_steps: 8000
+    n_epochs: 5000
+
+main_training:
+  paths:
+    model: 'outputs/initial_params.pickle'
+    weights: 'sources/weights.npy'
+    sky: 'sources/sky'
+    ref: 'sources/ref'
+    save_path_model: 'outputs/trained_params.pickle'
+    save_path_rfs: 'outputs/trained_response_functions.npy'
+    save_path_color_temps: 'outputs/trained_color_temperatures.txt'
+
+  exclude_nm_ranges:
+    red: [[569, 582]]
+    green: []
+    blue: []
+
+  training:
+    seed: 42
+    batch_size: 20
+    n_val_samples: 20
+    n_epochs: 500000
+    debug: False
+    loss_fn_weights: [1, 1, 0.05, 0.0000001]
+    warmup_cosine_decay_lr_schedule_params:
+      init_value: 0.00005
+      peak_value: 0.005
+      end_value: 0.00005
+      warmup_steps: 2500
+    optimizer_params:
+      weight_decay: 0.0001
