@@ -3,6 +3,8 @@ This repository contains the code of the DIY Spectroscope, which uses a camera a
 
 Check out the [video](https://youtu.be/cYWU4iq_pRU) of this project for instructions on how to use it. Note, unlike in the video, the GUI is now made up of just one program, which contains the calibration tabs and the tab showing the spectrum.
 
+[![DIY Spectroscope](https://img.youtube.com/vi/cYWU4iq_pRU/0.jpg)](https://www.youtube.com/watch?v=cYWU4iq_pRU)
+
 The optimization is done via an additional python script (without a GUI). The additional optimization step is not essential, you may get results that are good enough for your purpose, even without additional optimization.
 
 Note, currently the code is only implemented for cameras with whose colour filter array uses the X-Trans pattern (Fuji cameras).
