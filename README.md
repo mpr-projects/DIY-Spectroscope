@@ -1,7 +1,7 @@
 # DIY-Spectroscope
 This repository contains the code of the DIY Spectroscope, which uses a camera and an analogue (pocket) spectroscope to measure the spectrum of (visible) light.
 
-Check out the [video]([https://youtube.com/...](https://youtu.be/gNV5XhOI7VU)) of this project for instructions on how to use it. Note, unlike in the video, the GUI is now made up of just one program, which contains the calibration tabs and the tab showing the spectrum.
+Check out the [video]([https://youtube.com/...](https://youtu.be/cYWU4iq_pRU)) of this project for instructions on how to use it. Note, unlike in the video, the GUI is now made up of just one program, which contains the calibration tabs and the tab showing the spectrum.
 
 The optimization is done via an additional python script (without a GUI). The additional optimization step is not essential, you may get results that are good enough for your purpose, even without additional optimization.
 
@@ -22,7 +22,7 @@ For the optimization I'm using the machine learning framework JAX. Since I'm usi
 Now we can install the required python packages with `pip install -r requirements.txt` (you may have to use *pip3* on some OSs). I've split the code of the main program and that of the optimization of the response functions into two separate directories (*code* and *code_optimization*). You'll have to install the *requirements.txt* file in both folders. If you don't want to do the optimization then you don't have to install JAX and the requirements file in the *code_optimization* folder.
 
 # Using the Program
-This section only describes the actual usage of the code. For information about which lens to choose, which settings to use, how to take pictures, etc. check out the [video]([url](https://youtu.be/gNV5XhOI7VU)).
+This section only describes the actual usage of the code. For information about which lens to choose, which settings to use, how to take pictures, etc. check out the [video]([url](https://youtu.be/cYWU4iq_pRU)).
 
 The code is split up into two parts. The main program covers everything we need for using the program and a part of the calibration process. The optimization code is only used during calibration.
 
